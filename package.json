@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "type": "module",
+    "cashify": "^3.0.1"
+  }
+}

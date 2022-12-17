@@ -1,0 +1,55 @@
+<h1 class="text-center">
+    Настройки
+</h1>
+<h2 class="p-2">
+    Основная валюта
+</h2>
+
+<p>
+    Вы можете задать основную валюту. Курсы валют на главной странице будут сверяться с выбранной вами основной валютой. Введите трехзначный код валюты (например: "RUB" - российский рубль).
+</p>
+
+<label for="currency" class="form-label">Основная валюта</label>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" id="currency" placeholder="RUB" autocomplete="off">
+    <button class="btn btn-outline-secondary" type="button" id="set">Применить</button>
+    <div class="invalid-feedback">Неправильный код валюты</div>
+</div>
+
+<h2 class="p-2">
+    API ключ
+</h2>
+
+<p>
+    Для обновления базы данных приложения необходимо подключение к базе данных Open Exchange Rates (<a href="https://openexchangerates.org/" class="text-decoration-none" target=”_blank”>https://openexchangerates.org/</a>). Здесь вы можете изменить ключ API.
+</p>
+
+<label for="APIKey" class="form-label">API Ключ</label>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" id="APIKey" placeholder="" autocomplete="off">
+    <button class="btn btn-outline-secondary" type="button" id="setAPI">Применить</button>
+    <div class="invalid-feedback">Неправильный ключ API</div>
+    <div class="valid-feedback">Ключ API изменен. Теперь вы можете обновить базу данных.</div>
+</div>
+
+<h2 class="p-2">
+    Обновить базу данных
+</h2>
+
+<p>
+    Дата и время последнего обновления базы данных показана на главной странице. Здесь вы можете загрузить актуальные данные с OpenExchangeRates. Для обновления данных необходимо заменить весь текст в файле <strong>data/exchange.json</strong> в папке приложения на
+    текст, который был получен в окне, открывшемся после активации кнопки.
+</p>
+
+<button class="btn btn-outline-secondary" type="button" id="updateDB">Обновить базу данных</button>
+
+<h2 class="p-2">
+    Отключить кеширование
+</h2>
+
+<p>
+    При отключении кеширования, данные будут браться напрямую с OpenExchangeRates. <br><strong>ВНИМАНИЕ:</strong> Без кеширования нет необходимости обновлять базу данных, но количество запросов в месяц <strong>ограничено</strong>. Кеш будет отключен только на эту сессию.
+    Чтобы включить его снова, перезагрузите страницу.
+</p>
+
+<button class="btn btn-outline-secondary" type="button" id="changeSource">Отключить кеширование</button>

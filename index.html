@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency XChanger</title>
+    <link rel="stylesheet" href="./Style/bootstrap.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">XChanger</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="link-mainpage" class="nav-link active" aria-current="page" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link-calculator" class="nav-link" href="#">Калькулятор валют</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="link-settings" class="nav-link" href="#">Настройки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="content" class="container-xl">
+        <!-- load with index.js -->
+    </main>
+    <script type="module" src="../node_modules/cashify/dist/index.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
