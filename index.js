@@ -157,12 +157,21 @@ function changePage(page){
 	let content = document.getElementById('content');
 	if (page == 'calculator'){
 		content.innerHTML = loadHTML('pages/calculator.html');
+		document.getElementById('calculate').addEventListener( "click", () => calculate());
+		//Замена активных классов в меню
+		document.getElementById('link-mainpage').classList.remove('active');
+		document.getElementById('link-calculator').classList.add('active');
+		document.getElementById('link-settings').classList.remove('active');
 		currnentPage = page;
 		return
 	}
 	if (page == 'main'){
 		content.innerHTML = loadHTML('pages/main.html');
 		fillTable(mainCurrency);
+		//Замена активных классов в меню
+		document.getElementById('link-mainpage').classList.add('active');
+		document.getElementById('link-calculator').classList.remove('active');
+		document.getElementById('link-settings').classList.remove('active');
 		currnentPage = page;
 		return
 	}
@@ -175,10 +184,21 @@ function changePage(page){
 		document.getElementById('changeSource').addEventListener( "click", () => changeSource());
 		document.getElementById('currency').setAttribute('placeholder', mainCurrency);
 		document.getElementById('APIKey').setAttribute('placeholder', apiKey);
+		//Замена активных классов в меню
+		document.getElementById('link-mainpage').classList.remove('active');
+		document.getElementById('link-calculator').classList.remove('active');
+		document.getElementById('link-settings').classList.add('active');
 		currnentPage = page;
 		return
 	}
 }
 
+//Функционал калькулятора
+
+function calculate(){
+	let exchangeQuerry = document.getElementById('converter').value;
+	let result = cashify.convert(exchangeQuerry).toFixed(2);
+	document.getElementById('conversionResult').innerHTML = 'Результат: ' + result;
+}
 
 initiateUI();

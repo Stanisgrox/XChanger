@@ -3,12 +3,15 @@
 </h1>
 
 <p>
-    Введите в форму ниже запрос в формате "1 USD in RUB".
+    Введите в форму ниже запрос в формате "1 USD in RUB" (регистр не имеет значения).
 </p>
 
 <label for="converter" class="form-label">Основная валюта</label>
 <div class="input-group mb-3">
     <input type="text" class="form-control" id="converter" placeholder="1 USD in RUB" autocomplete="off">
-    <button class="btn btn-outline-secondary" type="button" id="set">Перевести</button>
+    <button class="btn btn-outline-secondary" type="button" id="calculate">Перевести</button>
     <div class="invalid-feedback">Неправильный формат запроса</div>
 </div>
+
+<p id="conversionResult" class="text-center fs-3">
+</p>
